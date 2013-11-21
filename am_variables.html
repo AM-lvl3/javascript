@@ -1,0 +1,141 @@
+<html>
+
+<script type="text/javascript">
+
+// Store the following into variables: number of children, partner's name, geographic location, job title.
+// Output your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."
+
+				document.write("FORTUNE TELLER")
+				document.write("<br>");
+				document.write("<br>");
+
+				function fortune(kids, wife, location, job){
+					var future = ("You will be an " + job + " in " + location + ", and married to " + wife + " with " + kids + " kids.");	
+					return future;
+				}
+
+
+				document.write(fortune(2, "Kim", "Toronto", "entrepreneur"));
+
+				document.write("<br>");
+				document.write("__________________________")
+				document.write("<br>");
+				document.write("<br>");
+
+// Store the current year in a variable.
+// Store their birth year in a variable.
+// Calculate their 2 possible ages based on the stored values.
+// Output them to the screen like so: "They are either NN or NN", substituting the values.
+
+					document.write("AGE CALCULATOR")
+					document.write("<br>");
+					document.write("<br>");
+
+					var currentYear = new Date().getFullYear();
+					var birthYear = prompt("What year were they born in? (eg. 19xx)")
+
+					document.write("They are either " + (currentYear-birthYear-1) + " or "  + (currentYear-birthYear) + ".");
+
+					document.write("<br>");
+					document.write("__________________________")
+					document.write("<br>");
+					document.write("<br>");
+
+// Store your current age into a variable.
+// Store a maximum age into a variable.
+// Store an estimated amount per day (as a number).
+// Calculate how many you would eat total for the rest of your life.
+// Output the result to the screen like so: "You will need NN to last you until the ripe old age of X".
+
+					document.write("LIFETIME SUPPLY CALCULATOR");
+					document.write("<br>");
+					document.write("<br>");
+
+					var currentAge = prompt("How old are you?");
+					var maxAge = prompt("Until what age do you want your supply to last?");
+					var dailyIntake = prompt("How many snacks do you eat a day?");
+
+					document.write("You will need " + ((maxAge-currentAge)*dailyIntake) + " to last you until the ripe old age of " + maxAge + ".");
+
+					document.write("<br>");
+					document.write("__________________________")
+					document.write("<br>");
+					document.write("<br>");
+
+
+// Store a radius into a variable.
+// Calculate the circumference based on the radius, and output "The circumference is NN".
+// Calculate the area based on the radius, and output "The area is NN".
+
+					document.write("GEOMETRIZER");
+					document.write("<br>");
+					document.write("<br>");
+
+					var radius = prompt("What is the radius of the circle?");
+
+					function circleC() {
+
+					var circumference = 2 * radius * Math.PI;
+					var circleCircumference = ("The circumference is " + circumference + ".");
+
+					return circleCircumference;
+					}
+
+
+					function circleA() {
+					var area = radius * radius * Math.PI;
+					var circleArea = ("The area is " + area + ".");
+
+						return circleArea;
+
+					}
+
+					document.write(circleC(radius));
+					document.write("<br>");
+					document.write(circleA(radius));
+
+					document.write("<br>");
+					document.write("__________________________")
+					document.write("<br>");
+					document.write("<br>");
+
+// Store a celsius temperature into a variable.
+// Convert it to fahrenheit and output "NN°C is NN°F".
+// Now store a fahrenheit temperature into a variable.
+// Convert it to celsius and output "NN°F is NN°C."
+
+document.write("THE TEMPERATURE CONVERTER");
+document.write("<br>");
+document.write("<br>");
+
+var tempInC = prompt("What is the temperature in celsius?");
+
+
+	function convToF() {
+	var convC = (tempInC * 9)/5 + 32;
+	var F = (tempInC + "C is " + convC + "F");
+	return F;
+	}
+
+document.write(convToF(tempInC));
+document.write("<br>");
+
+var tempInF = prompt("What is the temperature in fahrenheit?");
+
+	function convToC() {
+	var convF = ((tempInF - 32) * 5)/9;
+	var C = (tempInF + "F is " + convF + "C");
+	return C;
+	}
+
+document.write(convToC(tempInF));
+
+document.write("<br>");
+document.write("__________________________");
+document.write("<br>");
+document.write("<br>");
+
+</script>
+
+
+</html>
